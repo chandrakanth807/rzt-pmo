@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Demo</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width"/>
+    <base href="/"/>
+    <link rel="stylesheet" type="text/css"
+          href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="home as home">
+
+<div class="container" >
+    <div>
+        <button ng-click="home.getUser()" class="btn btn-primary">GetUser</button>
+    </div>
+</div>
+
+
+<h1>Login</h1>
+<div class="container" ng-show="!home.authenticated">
+    <a href="/home.html">Click here to login</a>
+</div>
+
+<script type="text/javascript" src="/webjars/angularjs/angular.min.js"></script>
+<script type="text/javascript">
+		angular
+				.module("app", [])
+				.config(
+						function($httpProvider) {
+							$httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+						}).controller("home", function($http, $location) {
+					var self = this;
+					self.getUser = function() {
+
+					$http.get("/rest/test/user").success(function(data) {
+					console.log("getUser called - success");
+						userName = data.userAuthentication.details.name;
+						console.log(userName);
+						self.authenticated=true;
+						$location.path("/");
+					}).error(function(response) {
+					    console.log("getUser called - error"+ response);
+						self.authenticated = false;
+					});
+					};
+				});
+
+</script>
+</body>
+</html>
