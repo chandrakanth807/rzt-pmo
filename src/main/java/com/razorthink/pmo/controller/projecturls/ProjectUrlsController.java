@@ -18,28 +18,23 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Created by root on 21/8/16.
- */
 @RestController
-@RequestMapping( value = "/rest/jira" )
+@RequestMapping(value = "/rest/jira")
 public class ProjectUrlsController extends AbstractWebappController {
     private final Logger logger = LoggerFactory.getLogger(TestController.class);
 
     @Autowired
     ProjectUrlsRepository projectUrlsRepository;
 
-    @RequestMapping( value = "/insert", method = RequestMethod.GET )
-    public ResponseEntity insertRecord()
-    {
+    @RequestMapping(value = "/insert", method = RequestMethod.GET)
+    public ResponseEntity insertRecord() {
         ProjectUrls tempObj = createTempObject();
         projectUrlsRepository.save(tempObj);
         return buildResponse("success");
     }
 
-    @RequestMapping( value = "/update", method = RequestMethod.GET )
-    public ResponseEntity updateRecord()
-    {
+    @RequestMapping(value = "/update", method = RequestMethod.GET)
+    public ResponseEntity updateRecord() {
         ProjectUrls tempObj = createTempObject();
         tempObj.setUserName("updatedUser");
         tempObj.setId(1);
@@ -47,23 +42,21 @@ public class ProjectUrlsController extends AbstractWebappController {
         return buildResponse("success");
     }
 
-    @RequestMapping( value = "/select", method = RequestMethod.GET )
-    public ResponseEntity findAllRecord()
-    {
+    @RequestMapping(value = "/select", method = RequestMethod.GET)
+    public ResponseEntity findAllRecord() {
         List<ProjectUrls> list = projectUrlsRepository.findAll();
         return buildResponse(list);
     }
-    @RequestMapping( value = "/delete/{id}", method = RequestMethod.GET )
-    public ResponseEntity deleteRecord(@PathVariable Integer id )
-    {
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    public ResponseEntity deleteRecord(@PathVariable Integer id) {
         projectUrlsRepository.delete(id);
         return buildResponse("success");
     }
 
-    private ProjectUrls createTempObject()
-    {
+    private ProjectUrls createTempObject() {
         ProjectUrls obj = new ProjectUrls();
-        obj.setUserName("user"+new Random().nextInt());
+        obj.setUserName("user" + new Random().nextInt());
         obj.setPassword("password");
         obj.setOwner("chandra");
         obj.setProjectName("PMO");

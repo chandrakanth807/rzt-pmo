@@ -9,9 +9,6 @@ import org.springframework.core.env.Environment;
 
 import javax.sql.DataSource;
 
-/**
- * Created by shams on 6/2/16.
- */
 
 @Configuration
 public class HikariDataSourceConfig {
@@ -20,13 +17,11 @@ public class HikariDataSourceConfig {
     private Environment env;
 
     @Bean
-    public DataSource dataSource()
-    {
+    public DataSource dataSource() {
         HikariConfig config = new HikariConfig();
         int poolSize = 20;
         String poolS = this.env.getProperty("spring.datasource.pool.size");
-        if( poolS != null && !poolS.isEmpty() )
-        {
+        if (poolS != null && !poolS.isEmpty()) {
             poolSize = Integer.parseInt(this.env.getProperty("spring.datasource.pool.size"));
         }
 

@@ -7,8 +7,7 @@ import org.springframework.http.ResponseEntity;
 
 public class AbstractController {
 
-    protected <T> ResponseEntity<Response<T>> buildResponse(T t )
-    {
+    protected <T> ResponseEntity<Response<T>> buildResponse(T t) {
         Response<T> appResponse = new Response<>(t);
         appResponse.setStatus(OperationStatus.SUCCESS);
         appResponse.setHttpStatus(HttpStatus.OK);
@@ -16,8 +15,7 @@ public class AbstractController {
         return new ResponseEntity<>(appResponse, HttpStatus.OK);
     }
 
-    protected ResponseEntity<Response<String>> buildErrorResponse( Exception e )
-    {
+    protected ResponseEntity<Response<String>> buildErrorResponse(Exception e) {
         Response<String> appResponse = new Response<>();
         appResponse.setResult(e.getMessage());
         appResponse.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
@@ -27,8 +25,7 @@ public class AbstractController {
         return new ResponseEntity<>(appResponse, appResponse.getHttpStatus());
     }
 
-    protected ResponseEntity<Response<String>> buildErrorResponse( Exception e, HttpStatus status, String message )
-    {
+    protected ResponseEntity<Response<String>> buildErrorResponse(Exception e, HttpStatus status, String message) {
         Response<String> appResponse = new Response<>();
         appResponse.setResult(e.getMessage());
         appResponse.setStatus(OperationStatus.ERROR);

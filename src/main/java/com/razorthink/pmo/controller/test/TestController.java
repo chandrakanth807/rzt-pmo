@@ -15,45 +15,34 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 
 
-/**
- * Created by root on 19/8/16.
- */
-
 /*@ApiIgnore
 @Api( value = "Test controller", description = "APIs for Test operations. Services that xxxxxx." )*/
 @RestController
-@RequestMapping( value = RestControllerRoute.TestController.ROUTE )
+@RequestMapping(value = RestControllerRoute.TestController.ROUTE)
 public class TestController extends AbstractWebappController {
     private final Logger logger = LoggerFactory.getLogger(TestController.class);
 
     /*@ApiOperation( value = "testing one service", notes = "just returns some string.", response = MyBean.class, code = 200 )*/
-    @RequestMapping( value = RestControllerRoute.TestController.Subroute.TEST_ONE_SERVICE, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE )
-    public ResponseEntity testOne()
-    {
-        try
-        {
+    @RequestMapping(value = RestControllerRoute.TestController.Subroute.TEST_ONE_SERVICE, method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity testOne() {
+        try {
             MyBean myBean = new MyBean();
             myBean.setName("chandra");
             return buildResponse(myBean);
-        }
-        catch( Exception e )
-        {
+        } catch (Exception e) {
             logger.error("Exception occurred in TestController.testOne ", e);
             return buildErrorResponse(e);
         }
     }
+
     /*@ApiOperation( value = "Refine Operation...", notes = "fetch a script, needs authorization token as header.", response = MyBean.class, code = 200 )*/
-    @RequestMapping( value = "/two", method = RequestMethod.GET )
-    public ResponseEntity getScriptContent()
-    {
-        try
-        {
+    @RequestMapping(value = "/two", method = RequestMethod.GET)
+    public ResponseEntity getScriptContent() {
+        try {
             MyBean myBean = new MyBean();
             myBean.setName("chandra");
             return buildResponse(myBean);
-        }
-        catch( Exception e )
-        {
+        } catch (Exception e) {
             logger.error("Exception occurred in TestController.testOne ", e);
             return buildErrorResponse(e);
         }

@@ -3,34 +3,32 @@ package com.razorthink.pmo.tables;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * Created by root on 21/8/16.
- */
+
 @Entity
-@Table( name = "projecturls", catalog = "pmo" )
+@Table(name = "projecturls", catalog = "pmo")
 public class ProjectUrls implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO )
-    @Column( name = "project_id", nullable = false )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "project_id", nullable = false)
     private Integer id;
 
-    @Column( name = "username", nullable = false, length = 90 )
+    @Column(name = "username", nullable = false, length = 90)
     private String userName;
 
-    @Column( name = "password", nullable = false, length = 45 )
+    @Column(name = "password", nullable = false, length = 45)
     private String password;
 
 
-    @Column( name = "project_url", nullable = false, length = 450 )
+    @Column(name = "project_url", nullable = false, length = 450)
     private String url;
 
-    @Column( name = "project_name", nullable = false, length = 45 )
+    @Column(name = "project_name", nullable = false, length = 45)
     private String projectName;
 
-    @Column( name = "created_by", nullable = false, length = 90 )
+    @Column(name = "created_by", nullable = false, length = 90)
     private String owner;
 
     public static long getSerialVersionUID() {

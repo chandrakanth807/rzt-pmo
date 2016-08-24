@@ -1,5 +1,6 @@
 package com.razorthink.pmo.service;
 
+import com.razorthink.pmo.bean.reports.Credls;
 import com.razorthink.pmo.commons.exceptions.DataException;
 import net.rcarz.jiraclient.BasicCredentials;
 import net.rcarz.jiraclient.JiraClient;
@@ -15,57 +16,44 @@ import java.util.Map;
 @Service
 public class AdvancedLoginService {
 
-	private static final Logger logger = LoggerFactory.getLogger(AdvancedLoginService.class);
-	private static JiraClient jira;
-	private static GreenHopperClient gh;
+    private static final Logger logger = LoggerFactory.getLogger(AdvancedLoginService.class);
 
-	/**
-	 * AdvancedLogin Authorize is used to authorize JiraClient and GreenHopperClient
-	 * using the credentials provided.They can be used to perform operations in Jira
-	 * by means of Rest calls. 
-	 * 
-	 * @param params Contains username,password and url to authorize the user to Jira
-	 */
-	public void authorize( Map<String, String> params )
-	{
-		logger.debug("advance authorizing");
-		String username = params.get("username");
-		String password = params.get("password");
-		String url = params.get("url");
-		BasicCredentials creds = new BasicCredentials(username, password);
-		jira = new JiraClient(url, creds);
-		gh = new GreenHopperClient(jira);
-	}
+    /**
+     * AdvancedLogin Authorize is used to authorize JiraClient and GreenHopperClient
+     * using the credentials provided.They can be used to perform operations in Jira
+     * by means of Rest calls.
+     *
+     * @param credentials Contains username,password and url to authorize the user to Jira
+     */
+    private JiraClient authorize(Credls credentials) {
+        logger.debug("advance authorizing");
+        JiraClient jira;
+        String username = credentials.getUsername();
+        String password = credentials.getPassword();
+        String url = credentials.getProjectUrl();
+        BasicCredentials creds = new BasicCredentials(username, password);
+        jira = new JiraClient(url, creds);
+        return jira;
+    }
 
-	/**
-	 * Returns a JiraClient Object which is used to fetch details from Jira.
-	 * 
-	 * @return JiraClient object
-	 * 
-	 * @throws DataException if user is not logged in
-	 */
-	public JiraClient getJiraClient()
-	{
-		if( jira == null )
-		{
-			throw new DataException(HttpStatus.UNAUTHORIZED.name(), "User not logged in");
-		}
-		return jira;
-	}
+    /**
+     * Returns a JiraClient Object which is used to fetch details from Jira.
+     *
+     * @return JiraClient object
+     * @throws DataException if user is not logged in
+     */
+    public JiraClient getJiraClient(Credls credentials) {
+        return authorize(credentials);
+    }
 
-	/**
-	 * Returns a GreenHopperClient Object which is used to fetch details from Jira.
-	 * 
-	 * @return GreenHopperClient object
-	 * 
-	 * @throws DataException if user is not logged in
-	 */
-	public GreenHopperClient getGreenHopperClient()
-	{
-		if( gh == null )
-		{
-			throw new DataException(HttpStatus.UNAUTHORIZED.name(), "User not logged in");
-		}
-		return gh;
-	}
+    /**
+     * Returns a GreenHopperClient Object which is used to fetch details from Jira.
+     *
+     * @return GreenHopperClient object
+     * @throws DataException if user is not logged in
+     */
+    public GreenHopperClient getGreenHopperClient(JiraClient jiraClient) {
+        return new GreenHopperClient(jiraClient);
+
+    }
 }
