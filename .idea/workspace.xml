@@ -1,49 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3be60887-9548-43c1-813c-ff354628c8ac" name="Default" comment="changed jira url login services and project source files formatting">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/BasicReportRequestParams.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/Credls.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/GenericReportResponse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/utils/JSONUtils.java" />
+    <list default="true" id="3be60887-9548-43c1-813c-ff354628c8ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pmo.iml" afterPath="$PROJECT_DIR$/pmo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/PmoApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/PmoApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/AggregateProjectReport.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/AggregateProjectReport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/IncompletedIssues.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/IncompletedIssues.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/RemovedIssues.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/RemovedIssues.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/SprintDetails.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/SprintDetails.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/SprintReport.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/SprintReport.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/SprintRetrospection.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/bean/reports/SprintRetrospection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/config/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/config/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/config/RestControllerRoute.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/config/RestControllerRoute.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/controller/AbstractController.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/controller/AbstractController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/exceptions/DataException.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/exceptions/DataException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/exceptions/WebappException.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/exceptions/WebappException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/pojo/OperationStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/pojo/OperationStatus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/pojo/Response.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/pojo/Response.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/pojo/Result.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/commons/pojo/Result.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/config/HikariDataSourceConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/config/HikariDataSourceConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/config/SimpleCORSFilter.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/config/SimpleCORSFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/AbstractWebappController.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/AbstractWebappController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/projecturls/ProjectUrlsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/projecturls/ProjectUrlsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/reports/AggregateProjectReportController.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/reports/AggregateProjectReportController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/reports/SprintReportController.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/reports/SprintReportController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/reports/SprintRetrospectionReportController.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/reports/SprintRetrospectionReportController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/test/TestController.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/controller/test/TestController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/repositories/ProjectUrlsRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/repositories/ProjectUrlsRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/AdvancedLoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/AdvancedLoginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/AggregateProjectReportService.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/AggregateProjectReportService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/IncompletedIssuesService.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/IncompletedIssuesService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/LoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/LoginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/RemovedIssuesService.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/RemovedIssuesService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/SprintReportMinimalService.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/SprintReportMinimalService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/SprintRetrospectionReportService.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/SprintRetrospectionReportService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/tables/ProjectUrls.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/tables/ProjectUrls.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/utils/ConvertToCSV.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/utils/ConvertToCSV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/utils/JiraService.java" afterPath="$PROJECT_DIR$/src/main/java/com/razorthink/pmo/utils/JiraService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="pmo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,8 +36,8 @@
       <file leaf-file-name="AggregateProjectReportService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/AggregateProjectReportService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="219" column="16" selection-start-line="219" selection-start-column="16" selection-end-line="219" selection-end-column="16" />
+            <state relative-caret-position="649">
+              <caret line="223" column="78" selection-start-line="223" selection-start-column="78" selection-end-line="223" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1045,11 +1004,19 @@
       <option name="presentableId" value="Default" />
       <updated>1471610607845</updated>
     </task>
+    <task id="LOCAL-00001" summary="changed jira url login services and project source files formatting">
+      <created>1472007498826</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1472007498826</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1055" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1920" height="1055" extended-state="1" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1063,7 +1030,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1494,8 +1461,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/razorthink/pmo/service/AggregateProjectReportService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="219" column="16" selection-start-line="219" selection-start-column="16" selection-end-line="219" selection-end-column="16" />
+        <state relative-caret-position="649">
+          <caret line="223" column="78" selection-start-line="223" selection-start-column="78" selection-end-line="223" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
